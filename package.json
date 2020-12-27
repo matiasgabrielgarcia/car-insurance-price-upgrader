@@ -4,6 +4,7 @@
   "description": "refactor of legacy code to update price of products based on particular specifications built on [NodeJS](https://nodejs.org/)",
   "main": "index.js",
   "scripts": {
+    "update-month-prices": "node src/scripts/monthly-runner",
     "test": "test"
   },
   "repository": {

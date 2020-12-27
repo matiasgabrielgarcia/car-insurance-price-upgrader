@@ -5,6 +5,7 @@ refactor of legacy code to update price of products based on particular specific
 # Getting Started
 
 - [Install](#install)
+- [Run](#run)
 - [Test](#test)
   - [Test coverage](#test-coverage)
 - [Folder structure](#folder-structure)
@@ -13,23 +14,23 @@ refactor of legacy code to update price of products based on particular specific
 
 ## Install
 
-Install
-
 ```bash
 npm install
 ```
 
-## Test
+## Run
 
-Test
+```bash
+npm run update-month-prices
+```
+
+## Test
 
 ```bash
 npm test
 ```
 
 ### Test coverage
-
-Test coverage
 
 ```bash
 npm run test-coverage
