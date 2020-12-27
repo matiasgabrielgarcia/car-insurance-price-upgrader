@@ -9,7 +9,6 @@ const PRICE_DEGRADER = 2;
  *
  * - Before the sell by date has passed, price degrades by 2
  * - Once the sell by date has passed, price degrades twice as fast
- * - The price of a product is never more than 50.
  */
 module.exports = class SuperSaleProduct extends NormalProduct {
   constructor(name, sellIn, price) {

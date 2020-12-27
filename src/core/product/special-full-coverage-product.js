@@ -23,18 +23,10 @@ module.exports = class SpecialFullCoverageProduct extends NormalProduct {
     } else if (this.price < constants.MAX_PRODUCT_PRICE) {
       this.price = this.price + constants.PRICE_DEGRADER;
       if (this.sellIn < DAYS_TO_INCREASE_BY_2) {
-        if (this.price < constants.MAX_PRODUCT_PRICE) {
-          this.price = this.price + constants.PRICE_DEGRADER;
-        }
+        this.price = this.price + constants.PRICE_DEGRADER;
       }
       if (this.sellIn < DAYS_TO_INCREASE_BY_3) {
-        if (this.price < constants.MAX_PRODUCT_PRICE) {
-          this.price = this.price + constants.PRICE_DEGRADER;
-        }
-      } else {
-        if (this.sellIn < constants.MIN_PRODUCT_SELLIN) {
-          this.price = this.price - this.price;
-        }
+        this.price = this.price + constants.PRICE_DEGRADER;
       }
     }
     this.sellIn = this.sellIn - 1;

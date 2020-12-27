@@ -5,7 +5,20 @@
   "main": "index.js",
   "scripts": {
     "update-month-prices": "node src/scripts/monthly-runner",
-    "test": "test"
+    "test": "mocha src/**/*.spec.js",
+    "test-coverage": "nyc --all --reporter=html mocha src/**/*.spec.js"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0"
+  },
+  "nyc": {
+    "exclude": [
+      "**/*.spec.js",
+      "src/scripts/monthly-runner.js",
+      "coverage"
+    ]
   },
   "repository": {
     "type": "git",
