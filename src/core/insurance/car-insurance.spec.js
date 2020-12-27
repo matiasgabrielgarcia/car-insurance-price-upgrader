@@ -14,4 +14,9 @@ describe("CarInsurance Test", function () {
     const products = carInsurance.updatePrice();
     expect(products[0].name).equal("foo");
   });
+  it("should create a CarInsurance and run asyncronic update", async function () {
+    const carInsurance = new CarInsurance([new NormalProduct("foo", 0, 0)]);
+    const products = await carInsurance.updatePriceAsync();
+    expect(products.length).equal(1);
+  });
 });

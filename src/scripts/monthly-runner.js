@@ -6,6 +6,7 @@ const FullCoverageProduct = require("../core/product/full-coverage-product");
 const SpecialFullCoverageProduct = require("../core/product/special-full-coverage-product");
 const MegaCoverageProduct = require("../core/product/mega-coverage-product");
 const SuperSaleProduct = require("../core/product/super-sale-product");
+const args = process.argv.slice(2);
 
 const productsAtDayZero = [
   new NormalProduct("Medium Coverage", 10, 20),
@@ -24,9 +25,21 @@ const productPrinter = function (product) {
   console.log(`${product.name}, ${product.sellIn}, ${product.price}`);
 };
 
-for (let i = 1; i <= 30; i += 1) {
-  console.log(`Day ${i}`);
+const consoleLog = function (products, day) {
+  console.log(`-------- day ${day} --------`);
   console.log("name, sellIn, price");
-  carInsurance.updatePrice().forEach(productPrinter);
+  products.forEach(productPrinter);
   console.log("");
+};
+
+console.log("OMGHAI!");
+consoleLog(carInsurance.products, 0);
+for (let i = 1; i <= 30; i += 1) {
+  if (args.indexOf("async") > -1) {
+    carInsurance.updatePriceAsync().then(function (promiseRespones) {
+      consoleLog(promiseRespones, i);
+    });
+  } else {
+    consoleLog(carInsurance.updatePrice(), i);
+  }
 }

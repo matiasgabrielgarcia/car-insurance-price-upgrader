@@ -22,10 +22,16 @@ module.exports = class SpecialFullCoverageProduct extends NormalProduct {
       this.price = this.price - this.price;
     } else if (this.price < constants.MAX_PRODUCT_PRICE) {
       this.price = this.price + constants.PRICE_DEGRADER;
-      if (this.sellIn < DAYS_TO_INCREASE_BY_2) {
+      if (
+        this.sellIn < DAYS_TO_INCREASE_BY_2 &&
+        this.price < constants.MAX_PRODUCT_PRICE
+      ) {
         this.price = this.price + constants.PRICE_DEGRADER;
       }
-      if (this.sellIn < DAYS_TO_INCREASE_BY_3) {
+      if (
+        this.sellIn < DAYS_TO_INCREASE_BY_3 &&
+        this.price < constants.MAX_PRODUCT_PRICE
+      ) {
         this.price = this.price + constants.PRICE_DEGRADER;
       }
     }

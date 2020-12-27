@@ -21,4 +21,12 @@ module.exports = class Product {
   updatePrice() {
     throw new Error("You must implement this method in subclass");
   }
+
+  async updatePriceAsync() {
+    const self = this;
+    return new Promise(function (resolve) {
+      self.updatePrice();
+      resolve(self);
+    });
+  }
 };

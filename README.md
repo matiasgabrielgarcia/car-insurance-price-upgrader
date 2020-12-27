@@ -5,6 +5,7 @@ refactor of legacy code to update price of products based on particular specific
 # Getting Started
 
 - [Install](#install)
+  - [Prerequisites](#prerequisites)
 - [Run](#run)
 - [Test](#test)
   - [Test coverage](#test-coverage)
@@ -18,11 +19,21 @@ refactor of legacy code to update price of products based on particular specific
 npm install
 ```
 
+### Prerequisites
+
+- Node.js - [Download & Install Node.js](https://nodejs.org/en/download/) and the npm package manager
+
 ## Run
 
 ```bash
-npm run update-month-prices
+npm start
 ```
+
+Optional arguments:
+
+| Parameter | Default | Description         |
+| :-------- | :-----: | :------------------ |
+| -- async  |  sync   | runs asynchronously |
 
 ## Test
 
