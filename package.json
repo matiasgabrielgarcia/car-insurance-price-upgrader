@@ -1,0 +1,19 @@
+{
+  "name": "car-insurance-price-upgrader",
+  "version": "1.0.0",
+  "description": "refactor of legacy code to update price of products based on particular specifications built on [NodeJS](https://nodejs.org/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matiasgabrielgarcia/car-insurance-price-upgrader.git"
+  },
+  "author": "Matias Garcia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matiasgabrielgarcia/car-insurance-price-upgrader/issues"
+  },
+  "homepage": "https://github.com/matiasgabrielgarcia/car-insurance-price-upgrader#readme"
+}
